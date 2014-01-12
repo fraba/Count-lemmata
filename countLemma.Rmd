@@ -43,7 +43,7 @@ replaceWithLemma <- function (text, dictionary) {
   text_out <- character(0)
   for (i in 1:length(text)) {
     text.split <- strsplit(text[i], "\\s")
-    translation <- morph_dict[unlist(text.split)]
+    translation <- dictionary[unlist(text.split)]
     text_out <- append(text_out, paste(translation, sep="", collapse=" "))
   }
   PlainTextDocument(text_out, id = ID(text_out), language = Language(text_out))
