@@ -51,8 +51,8 @@ replaceWithLemma <- function (text, dictionary) {
 
 # Create concordance dictionary
 lemmata <- read.delim(lexicon, header=F, quote="", encoding = lexicon_encoding)
-morph_dict <- as.character(lemmata$V2)
-names(morph_dict) <- lemmata$V1
+morph_dict <- as.character(lemmata$V1)
+names(morph_dict) <- lemmata$V2
 # rm(lemmata, lexicon)
 
 #Load texts
